@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(0, 0, 0);
+    background-image: url(../img/glasses-background.jpg );
+    background-size: cover;
+    font-family: 'Dancing Script', cursive;
+    text-align: unset !important;
+}
+
+.header-container {
+    background-color: rgba(76, 76, 85, 0.904);
+    margin: 7rem 10rem -3rem 10rem;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    color: white;
+    text-shadow: 2px 7px 15px rgb(54, 54, 54);
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 2px;
+}
+
+.header-size {
+    font-size: 7em;
+}
+
+.intro-container {
+    background-color: rgba(197, 197, 218, 0.75);
+    margin: 0 15rem;
+    max-width: 200px;
+}
+
+.text-light {
+    color: white;
+    text-shadow: 2px 7px 15px rgb(54, 54, 54);
+}
+
+.h-2 {
+    text-align: center;
+    width: fit-content;
+}
+
+.main-p {
+    text-align: center;
+    width: fit-content;
+    font-family: 'Dancing Script', cursive;
+    
+}
+
+.drink-name {
+    color: rgb(4, 1, 44);
+    text-shadow: 2px 2px 10px 15px black;
+    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+}
+
+.drink-img {
+    width: 40%;
+}
+.drink-container {
+    background-color: rgba(255, 255, 255, 0.835);
+    box-shadow: 3px 3px 8px whitesmoke;
+
+}
+/*
+
+For the background picture:
+    .canvas {
+        box-sizing: border-box;
+    }
+
+    .background-canvas-color {
+        color: rgb(147,78,22)
+    }
+
+*/
+
+
+
+
+/*@media screen (min-width:768px) {
+    .nav-link-padding {
+        padding: 0.5rem 3rem;
+    }*/
