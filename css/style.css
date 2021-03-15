@@ -3,7 +3,7 @@ body {
     background-image: url(../img/glasses-background.jpg );
     background-size: cover;
     font-family: 'Dancing Script', cursive;
-    text-align: unset !important;
+    text-align: unset;
 }
 
 .header-container {
@@ -35,6 +35,13 @@ header {
 .text-light {
     color: white;
     text-shadow: 2px 7px 15px rgb(54, 54, 54);
+}
+
+.text-light-large {
+    color: white;
+    text-shadow: 2px 7px 15px rgb(54, 54, 54);
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
 }
 
 .h-2 {
