@@ -75,15 +75,6 @@ function handleIngredientsClick(e) {
 
 $('#js-drink-container').click(handleIngredientsClick);
 
-//TESTING
-/*
-if($('#js-drink-container').click(handleIngredientsClick)){
-    $('#js-drink-container').click(loadDrinks);
-}
-*/
-
-//TESTING
-
 loadDrinks();
 
 function loadDrinks() {
