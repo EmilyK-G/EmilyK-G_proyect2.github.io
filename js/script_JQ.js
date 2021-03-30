@@ -29,7 +29,7 @@ function printIngredientsData(ingredients, id) {
         }
 
         ingredientsMarkupList.push(`
-            <div id="${details.idDrink}" class="js-back">
+            <div data-id="${details.idDrink}" class="js-back">
                 <div>
                     <h2>Ingredients</h2>
                     <ul>
@@ -55,13 +55,19 @@ function handleIngredientsClick(e) {
     //console.log(e);
     //debugger;
     let id = $(e.target).data('id');
+    
     if ( typeof id === 'undefined' ) {
         id = $(e.target).parent().data('id');
+        if ( typeof id === 'undefined' ) {
+            id = $(e.target).parent().parent().data('id');
+            if (typeof id === 'undefined') {
+                id = $(e.target).parent().parent().parent().data('id');
+            }
+        }
     }
 
     if (typeof id !== 'undefined') {
         const hasBackSide = $(`.js-drink-single-box[data-id=${id}] .js-back`).length === 1;
-
         if ( hasBackSide ) {
             $(`.js-drink-single-box[data-id=${id}] .js-back`).toggle();
             $(`.js-drink-single-box[data-id=${id}] .js-front`).toggle();
