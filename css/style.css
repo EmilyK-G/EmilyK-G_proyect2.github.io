@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.527);
+    box-shadow: 5px 5px 10px rgba(197, 197, 218, 0.664);
 }
 
 header {
@@ -135,6 +135,28 @@ div.drink-container:hover {
 .drink-img:hover {
     opacity: 0.7;
 }
+
+/*Drinks toggle*/
+.drinks_perspective {
+    perspective: 500px;
+}
+.drinks-container-toggle {
+    transform-style: preserve-3d;
+    animation: rotate-inverse 1s linear both;
+}
+.drink-single-box-toggle {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.drink-single-box-toggle.is-flipped {
+    transform: rotateY(180deg);
+}
+.card_face_back {
+    transform: rotateY(180deg);
+}
+
 
 .footer {
     background-color: rgba(51, 14, 14, 0.835);
