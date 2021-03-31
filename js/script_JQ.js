@@ -1,10 +1,9 @@
-//THE ORIGINAL
 function printData(cocktails) {
    
     var drinkMarkupList = [];
     for (let drink of cocktails.drinks) {
         drinkMarkupList.push(`
-            <div class="container my-4 p-4 drink-container js-drink-single-box drink-single-box-toggle" data-id="${drink.idDrink}">
+            <div class="container my-4 py-4 p-sm-4 drink-container js-drink-single-box" data-id="${drink.idDrink}">
               <div class="js-front front-container">
                 <h2 class="drink-name">${drink.strDrink}</h2>
                 <img class="drink-img" src="${drink.strDrinkThumb}" alt="A glass of ${drink.strDrink}" />
@@ -29,7 +28,7 @@ function printIngredientsData(ingredients, id) {
         }
 
         ingredientsMarkupList.push(`
-            <div data-id="${details.idDrink}" class="js-back card_face_back">
+            <div data-id="${details.idDrink}" class="js-back">
                 <div>
                     <h2>Ingredients</h2>
                     <ul>
@@ -69,8 +68,8 @@ function handleIngredientsClick(e) {
     if (typeof id !== 'undefined') {
         const hasBackSide = $(`.js-drink-single-box[data-id=${id}] .js-back`).length === 1;
         if ( hasBackSide ) {
-            $(`.js-drink-single-box[data-id=${id}] .js-back`).toggle('is-flipped');
-            $(`.js-drink-single-box[data-id=${id}] .js-front`).toggle('is-flipped');
+            $(`.js-drink-single-box[data-id=${id}] .js-back`).toggle('');
+            $(`.js-drink-single-box[data-id=${id}] .js-front`).toggle('');
         } else {
             const ingredientsUrl = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
             $.get(ingredientsUrl).done(ingredients => printIngredientsData(ingredients, id));
