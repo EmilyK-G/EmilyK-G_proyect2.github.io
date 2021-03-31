@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "predeploy": "npm run build",
+    "build": "npm i",
     "deploy": "gh-pages -d ."
   },
   "repository": {
